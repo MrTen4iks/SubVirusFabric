@@ -1,0 +1,11 @@
+{
+  "effect.subteam.unknown_infection": "Неизвестная инфекция",
+  "effect.subteam.unknown": "Неизвестность",
+  "death.attack.infected": "%1$s умер от Неизвестной инфекции!",
+  "death.attack.infected.player": "%1$s был заражен %2$s.",
+  "item.minecraft.potion.effect.unknown_infection": "Зелье инфекции",
+  "item.minecraft.splash_potion.effect.unknown_infection": "Взрывное зелье инфекции",
+  "item.minecraft.lingering_potion.effect.unknown_infection": "Туманное зелье инфекции",
+  "item.minecraft.tipped_arrow.effect.unknown_infection": "Стрела инфекции"
+
+}

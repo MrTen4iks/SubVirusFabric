@@ -1,0 +1,10 @@
+{
+  "effect.subteam.unknown_infection": "Unknown Infection",
+  "effect.subteam.unknown": "Unknown",
+  "death.attack.infected": "%1$s died from Unknown Infection!",
+  "death.attack.infected.player": "%1$s was infected by %2$s.",
+  "item.minecraft.potion.effect.unknown_infection": "Potion of infection",
+  "item.minecraft.splash_potion.effect.unknown_infection": "Explosive Infection Potion",
+  "item.minecraft.lingering_potion.effect.unknown_infection": "The Misty Potion of Infection",
+  "item.minecraft.tipped_arrow.effect.unknown_infection": "The arrow of infection"
+}

@@ -1,0 +1,7 @@
+{
+  "exhaustion": 0.1,
+  "message_id": "infected",
+  "scaling": "always",
+  "effects": "freezing",
+  "bypass_armor": true
+}
