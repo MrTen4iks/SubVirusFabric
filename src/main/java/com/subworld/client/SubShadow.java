@@ -1,5 +1,6 @@
-package com.subworld;
+package com.subworld.client;
 
+import com.subworld.Subteam;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.util.Identifier;
@@ -12,7 +13,7 @@ public class SubShadow {
 
     public void onInitializeClient() {
         // Attach our rendering code to before the chat hud layer. Our layer will render right before the chat. The API will take care of z spacing and automatically add 200 after every layer.
-        HudLayerRegistrationCallback.EVENT.register(layeredDrawer -> layeredDrawer.attachLayerBefore( IdentifiedLayer.CHAT, EXAMPLE_LAYER, SubShadow::render));
+        HudLayerRegistrationCallback.EVENT.register(layeredDrawer -> layeredDrawer.attachLayerBefore(IdentifiedLayer.CHAT, EXAMPLE_LAYER, SubShadow::render));
     }
 
     private static void render(DrawContext context, RenderTickCounter tickCounter) {
