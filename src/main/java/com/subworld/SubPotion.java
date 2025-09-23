@@ -1,7 +1,6 @@
 package com.subworld;
 
 import com.subworld.effect.SubEffects;
-import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Items;
@@ -36,4 +35,22 @@ public class SubPotion  {
                     Registries.POTION.getEntry(UNKNOWN_INFECTION_POTION)
             );
         });
-}}
+}
+
+    public static final Potion UNKNOWNS = Registry.register(
+                        Registries.POTION,
+                        Identifier.of(Subteam.MOD_ID, "unknowns"),
+                        new Potion("unknowns",
+                                new StatusEffectInstance(
+                                        Registries.STATUS_EFFECT.getEntry(SubEffects.UNKNOWNS),
+                                        3600,
+                                        0
+                                )
+                        ));
+
+
+
+
+
+
+}

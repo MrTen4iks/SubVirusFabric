@@ -1,11 +1,18 @@
 {
   "effect.subteam.unknown_infection": "Неизвестная инфекция",
-  "effect.subteam.unknown": "Неизвестность",
+  "effect.subteam.unknowns": "Неизвестность",
   "death.attack.infected": "%1$s умер от Неизвестной инфекции!",
   "death.attack.infected.player": "%1$s был заражен %2$s.",
   "item.minecraft.potion.effect.unknown_infection": "Зелье инфекции",
   "item.minecraft.splash_potion.effect.unknown_infection": "Взрывное зелье инфекции",
   "item.minecraft.lingering_potion.effect.unknown_infection": "Туманное зелье инфекции",
-  "item.minecraft.tipped_arrow.effect.unknown_infection": "Стрела инфекции"
-
+  "item.minecraft.tipped_arrow.effect.unknown_infection": "Стрела инфекции",
+  "item.subteam.infected_ingot": "Заражённый слиток",
+  "item.subteam.infecteds_raw": "Рудное заражёние",
+  "block.subteam.infected_ore": "Заражённая руда",
+  "item.minecraft.potion.effect.unknowns": "Зелье Неизвестности",
+  "item.minecraft.splash_potion.effect.unknowns": "Взрывное зелье Неизвестности",
+  "item.minecraft.lingering_potion.effect.unknowns": "Туманное зелье Неизвестности",
+  "item.minecraft.tipped_arrow.effect.unknowns": "Стрела Неизвестности",
+  "subteam.group_trans": "Заражённие SubWorld "
 }
