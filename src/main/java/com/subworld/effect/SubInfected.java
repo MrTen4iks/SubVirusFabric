@@ -17,10 +17,10 @@ public class SubInfected extends StatusEffect {
 
         return true;
     }
-    public class SubEffects {
+    public static class SubEffects {
         public static final StatusEffect UNKNOWN = register("unknown", new SubInfected());
 
-        private static StatusEffect register(String name, StatusEffect effect) {
+        public static StatusEffect register(String name, StatusEffect effect) {
             return Registry.register(Registries.STATUS_EFFECT, Identifier.of(Subteam.MOD_ID, name), effect);
         }
 
