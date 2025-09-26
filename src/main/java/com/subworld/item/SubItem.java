@@ -11,8 +11,9 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class SubItem {
-    public static final Item INFECTEDS_RAW = register("infecteds_raw", Item::new, new Item.Settings());
+    public static final Item INFECTED_RAW = register("infected_raw", Item::new, new Item.Settings());
     public static final Item INFECTED_INGOT = register("infected_ingot", Item::new, new Item.Settings());
+    public static final Item INFECTED_DUST = register("infected_dust", Item::new, new Item.Settings());
     public static Item register(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(Subteam.MOD_ID, name));
         Item item = itemFactory.apply(settings.registryKey(itemKey));

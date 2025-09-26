@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "subteam:infected_dust",
+    "B": "minecraft:stone_bricks",
+    "D": "minecraft:diamond_block"
+  },
+  "pattern": [
+    "B#B",
+    "#D#",
+    "B#B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "subteam:infected_ore"
+  }
+}

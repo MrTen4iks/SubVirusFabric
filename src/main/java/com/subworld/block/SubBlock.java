@@ -38,7 +38,13 @@ public class SubBlock {
     public static final Block INFECTED_ORE = register(
             "infected_ore",
             Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool(),
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5.0F,5.0F),
+            true
+    );
+    public static final Block UNCERTAIN_BLOCK = register(
+            "uncertain_block",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(4.0F,4.0F),
             true
     );
 

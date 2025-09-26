@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "subteam:item/infecteds_raw"
+    "model": "subteam:item/infected_dust"
   }
 }
