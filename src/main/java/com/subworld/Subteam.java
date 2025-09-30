@@ -47,6 +47,7 @@ public class Subteam implements ModInitializer {
             itemGroup.add(SubItem.INFECTED_DUST);
             itemGroup.add(SubBlock.INFECTED_ORE.asItem());
             itemGroup.add(SubBlock.UNCERTAIN_BLOCK.asItem());
+            itemGroup.add(SubBlock.UNCERTAIN_LOG.asItem());
             itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotion.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotion.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotion.UNKNOWN_INFECTION_POTION));

@@ -12,6 +12,7 @@
   "block.subteam.infected_ore": "Заражённая руда",
   "item.subteam.infected_dust": "Заражённая пыль",
   "block.subteam.uncertain_block": "Неизвестный блок",
+  "block.subteam.uncertain_log": "Неизвестное бревно",
   "item.minecraft.potion.effect.unknowns": "Зелье Неизвестности",
   "item.minecraft.splash_potion.effect.unknowns": "Взрывное зелье Неизвестности",
   "item.minecraft.lingering_potion.effect.unknowns": "Туманное зелье Неизвестности",

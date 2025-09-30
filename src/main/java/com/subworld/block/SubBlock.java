@@ -3,6 +3,7 @@ package com.subworld.block;
 import com.subworld.Subteam;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.PillarBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -47,7 +48,12 @@ public class SubBlock {
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(4.0F,4.0F),
             true
     );
-
+    public static final Block UNCERTAIN_LOG = register(
+            "uncertain_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
+            true
+    );
 
 
 
