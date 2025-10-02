@@ -32,6 +32,7 @@ public class Subteam implements ModInitializer {
         SubEffects.registerModEffects();
         SubItem.registerModItems();
         SubBlock.registerModBlocks();
+
         var ignore = SubPotion.UNKNOWN_INFECTION_POTION;
         SubPotion.spid();
 
@@ -45,9 +46,12 @@ public class Subteam implements ModInitializer {
             itemGroup.add(SubItem.INFECTED_INGOT);
             itemGroup.add(SubItem.INFECTED_RAW);
             itemGroup.add(SubItem.INFECTED_DUST);
+            itemGroup.add(SubItem.INFECTED_STICK);
             itemGroup.add(SubBlock.INFECTED_ORE.asItem());
             itemGroup.add(SubBlock.UNCERTAIN_BLOCK.asItem());
             itemGroup.add(SubBlock.UNCERTAIN_LOG.asItem());
+            itemGroup.add(SubBlock.UNCERTAIN_PLANKS.asItem());
+            itemGroup.add(SubItem.UNCERTAIN_PICKAXE);
             itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotion.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotion.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotion.UNKNOWN_INFECTION_POTION));

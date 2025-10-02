@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "subteam:uncertain_log"
+  ],
+  "result": {
+    "count": 4,
+    "id": "subteam:uncertain_planks"
+  }
+}

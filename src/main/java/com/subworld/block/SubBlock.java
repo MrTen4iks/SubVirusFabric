@@ -54,6 +54,12 @@ public class SubBlock {
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
             true
     );
+    public static final Block UNCERTAIN_PLANKS = register(
+            "uncertain_planks",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
+            true
+    );
 
 
 

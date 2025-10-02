@@ -5,10 +5,10 @@
 	"name": "SubVirus",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"Subteam!"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://discord.gg/d5NakNzNKD",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
