@@ -21,7 +21,6 @@ public class SubTags {
     }
 
     public static class Items {
-        public static final TagKey<Item> INFECTED_PICKAXE = createTag("infected_pickaxe");
         public static final TagKey<Item> INFECTED_ITEMS = createTag("infected_items");
         public static final TagKey<Item> INFECTED_INGOT_REPAIR = createTag("infected_ingot_repair");
         public static final TagKey<Item> REPAIRS_INFECTED_ARMOR = TagKey.of(Registries.ITEM.getKey(), Identifier.of(Subteam.MOD_ID, "repairs_infected_armor"));
