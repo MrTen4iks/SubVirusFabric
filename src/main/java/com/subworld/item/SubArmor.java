@@ -1,13 +1,8 @@
 package com.subworld.item;
 
-import com.subworld.Subteam;
 import net.minecraft.item.equipment.ArmorMaterial;
-import net.minecraft.item.equipment.EquipmentAsset;
-import net.minecraft.item.equipment.EquipmentAssetKeys;
 import net.minecraft.item.equipment.EquipmentType;
-import net.minecraft.registry.RegistryKey;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Identifier;
 
 import java.util.Map;
 
@@ -22,15 +17,17 @@ public class SubArmor {
     public static final ArmorMaterial INSTANCE = new ArmorMaterial(
             BASE_DURABILITY,
             Map.of(
-                    EquipmentType.HELMET, 3,
-                    EquipmentType.CHESTPLATE, 8,
-                    EquipmentType.LEGGINGS, 6,
-                    EquipmentType.BOOTS, 3
+                    EquipmentType.HELMET, 4,
+                    EquipmentType.CHESTPLATE, 9,
+                    EquipmentType.LEGGINGS, 7,
+                    EquipmentType.BOOTS, 4,
+                    EquipmentType.BODY, 20
             ),
             5,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON,
             0.0F,
             0.0F,
+
             REPAIRS_INFECTED_ARMOR,
             INFECTED_ARMOR_MATERIAL_KEY
     );

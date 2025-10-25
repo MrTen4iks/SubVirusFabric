@@ -11,7 +11,6 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
-import static net.minecraft.item.Items.register;
 
 public class SubItem {
     public static final Item INFECTED_RAW = register("infected_raw", Item::new, new Item.Settings());
@@ -43,9 +42,8 @@ public class SubItem {
     public static final Item HAZMAT_SUIT_PACK = register("hazmat_suit_pack",
             Item::new,
             new Item.Settings().armor(SubArmor.INSTANCE, EquipmentType.CHESTPLATE)
-                    .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(SubItemMaterials.BASE_DURABILITY))
+                    .maxDamage(EquipmentType.BODY.getMaxDamage(SubItemMaterials.BASE_DURABILITY))
     );
-
 
     public static final Item HAZMAT_SUIT_LEGGINGS = register(
             "hazmat_suit_leggings",
