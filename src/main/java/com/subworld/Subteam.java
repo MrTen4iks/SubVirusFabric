@@ -52,6 +52,12 @@ public class Subteam implements ModInitializer {
             itemGroup.add(SubBlock.UNCERTAIN_LOG.asItem());
             itemGroup.add(SubBlock.UNCERTAIN_PLANKS.asItem());
             itemGroup.add(SubItem.UNCERTAIN_PICKAXE);
+            itemGroup.add(SubItem.UNCERTAIN_SWORD);
+            itemGroup.add(SubItem.HAZMAT_SUIT_BOOTS);
+            itemGroup.add(SubItem.HAZMAT_SUIT_LEGGINGS);
+            itemGroup.add(SubItem.HAZMAT_SUIT_CHESTPLATE);
+            itemGroup.add(SubItem.HAZMAT_SUIT_HELMET);
+            itemGroup.add(SubItem.HAZMAT_SUIT_PACK);
             itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotion.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotion.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotion.UNKNOWN_INFECTION_POTION));

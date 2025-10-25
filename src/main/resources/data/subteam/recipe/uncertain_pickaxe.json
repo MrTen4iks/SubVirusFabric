@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "subteam:infected_ingot",
+    "S": "subteam:infected_stick",
+    "B": "minecraft:end_crystal",
+    "N" :"minecraft:netherite_pickaxe"
+  },
+  "pattern": [
+    "IBI",
+    " N ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "subteam:uncertain_pickaxe"
+  }
+}
