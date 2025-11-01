@@ -5,15 +5,15 @@
     "I": "subteam:infected_ingot",
     "S": "subteam:infected_stick",
     "B": "minecraft:heavy_core",
-    "N" :"minecraft:netherite_pickaxe"
+    "N" :"minecraft:netherite_sword"
   },
   "pattern": [
-    " IB",
-    " NI",
-    "S  "
+    "  B",
+    "IN ",
+    "SI "
   ],
   "result": {
     "count": 1,
-    "id": "subteam:uncertain_pickaxe"
+    "id": "subteam:uncertain_sword"
   }
 }

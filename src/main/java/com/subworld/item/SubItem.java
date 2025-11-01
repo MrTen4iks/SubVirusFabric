@@ -1,6 +1,7 @@
 package com.subworld.item;
 
 import com.subworld.Subteam;
+import com.subworld.item.armor.SubArmorMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -31,32 +32,32 @@ public class SubItem {
     public static final Item HAZMAT_SUIT_HELMET = register(
             "hazmat_suit_helmet",
             Item::new,
-            new Item.Settings().armor(SubArmor.INSTANCE, EquipmentType.HELMET)
-                    .maxDamage(EquipmentType.HELMET.getMaxDamage(SubItemMaterials.BASE_DURABILITY))
+            new Item.Settings().armor(SubArmorMaterials.INSTANCE, EquipmentType.HELMET)
+                    .maxDamage(EquipmentType.HELMET.getMaxDamage(SubArmorMaterials.BASE_DURABILITY))
     );
     public static final Item HAZMAT_SUIT_CHESTPLATE = register("hazmat_suit_chestplate",
             Item::new,
-            new Item.Settings().armor(SubArmor.INSTANCE, EquipmentType.CHESTPLATE)
-                    .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(SubItemMaterials.BASE_DURABILITY))
+            new Item.Settings().armor(SubArmorMaterials.INSTANCE, EquipmentType.CHESTPLATE)
+                    .maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(SubArmorMaterials.BASE_DURABILITY))
     );
     public static final Item HAZMAT_SUIT_PACK = register("hazmat_suit_pack",
             Item::new,
-            new Item.Settings().armor(SubArmor.INSTANCE, EquipmentType.CHESTPLATE)
-                    .maxDamage(EquipmentType.BODY.getMaxDamage(SubItemMaterials.BASE_DURABILITY))
+            new Item.Settings().armor(SubArmorMaterials.INSTANCE, EquipmentType.CHESTPLATE)
+                    .maxDamage(EquipmentType.BODY.getMaxDamage(SubArmorMaterials.BASE_DURABILITY))
     );
 
     public static final Item HAZMAT_SUIT_LEGGINGS = register(
             "hazmat_suit_leggings",
             Item::new,
-            new Item.Settings().armor(SubArmor.INSTANCE, EquipmentType.LEGGINGS)
-                    .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(SubItemMaterials.BASE_DURABILITY))
+            new Item.Settings().armor(SubArmorMaterials.INSTANCE, EquipmentType.LEGGINGS)
+                    .maxDamage(EquipmentType.LEGGINGS.getMaxDamage(SubArmorMaterials.BASE_DURABILITY))
     );
 
     public static final Item HAZMAT_SUIT_BOOTS = register(
             "hazmat_suit_boots",
             Item::new,
-            new Item.Settings().armor(SubArmor.INSTANCE, EquipmentType.BOOTS)
-                    .maxDamage(EquipmentType.BOOTS.getMaxDamage(SubItemMaterials.BASE_DURABILITY))
+            new Item.Settings().armor(SubArmorMaterials.INSTANCE, EquipmentType.BOOTS)
+                    .maxDamage(EquipmentType.BOOTS.getMaxDamage(SubArmorMaterials.BASE_DURABILITY))
     );
 
 

@@ -1,0 +1,76 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.hazmat_suit.new": {
+			"loop": true
+		},
+		"animation.hazmat_suit.new2": {
+			"animation_length": 2.2083,
+			"bones": {
+				"bipedHead": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 35, 0]
+					}
+				},
+				"armorHead": {
+					"position": [0, -35, 0]
+				},
+				"bipedBody": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 35, 0]
+					}
+				},
+				"1body": {
+					"position": [0, -35, 0]
+				},
+				"2body": {
+					"position": [0, -35, 0]
+				},
+				"bipedRightArm": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 35, 0]
+					}
+				},
+				"1ra": {
+					"position": [0, -35, 0]
+				},
+				"bipedLeftArm": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 35, 0]
+					}
+				},
+				"1la": {
+					"position": [0, -35, 0]
+				},
+				"bipedLeftLeg": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 35, 0]
+					}
+				},
+				"armorLeftLeg": {
+					"position": [0, -35, 0]
+				},
+				"armorLeftBoot": {
+					"position": [0, -35, 0]
+				},
+				"bipedRightLeg": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, 35, 0]
+					}
+				},
+				"armorRightLeg": {
+					"position": [0, -35, 0]
+				},
+				"armorRightBoot": {
+					"position": [0, -35, 0]
+				}
+			}
+		}
+	}
+}
