@@ -17,6 +17,8 @@ public class SubComponents {
             Identifier.of(SubVirus.MOD_ID, "my_component"),
             ComponentType.<Integer>builder().codec(Codecs.RGB).build()
     );*/
+
+
     public static void initialize() {
         SubVirus.LOGGER.info("Registering {} components", SubVirus.MOD_ID);
     }

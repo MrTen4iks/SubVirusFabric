@@ -3,7 +3,6 @@ package com.subworld.subvirus.world.items.armor;
 
 import com.subworld.subvirus.client.render.armor.HazmatArmorRenderer;
 import com.subworld.subvirus.registry.SubComponents;
-import com.subworld.subvirus.util.IDyeableItem;
 import net.minecraft.client.render.entity.equipment.EquipmentModel;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.state.BipedEntityRenderState;
