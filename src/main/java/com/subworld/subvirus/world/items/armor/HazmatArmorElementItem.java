@@ -7,6 +7,7 @@ import net.minecraft.client.render.entity.equipment.EquipmentModel;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.state.BipedEntityRenderState;
 import net.minecraft.component.Component;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -29,6 +30,8 @@ import java.util.function.Consumer;
 import static com.subworld.subvirus.SubVirus.MOD_ID;
 
 public class HazmatArmorElementItem extends Item implements GeoItem {
+
+
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 

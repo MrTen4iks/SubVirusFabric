@@ -16,7 +16,6 @@ public class SubTags {
     public static class Blocks {
         public static final TagKey<Block> NEEDS_INFECTED_TOOL = createTag("needs_infected_tool");
         public static final TagKey<Block> INCORRECT_FOR_INFECTED_TOOL = createTag("incorrect_for_infected_tool");
-        public static final TagKey<Item> REPAIRS_INFECTED_ARMOR = TagKey.of(Registries.ITEM.getKey(), Identifier.of(SubVirus.MOD_ID, "repairs_infected_armor"));
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(SubVirus.MOD_ID, name));
@@ -33,16 +32,4 @@ public class SubTags {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(SubVirus.MOD_ID, name));
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

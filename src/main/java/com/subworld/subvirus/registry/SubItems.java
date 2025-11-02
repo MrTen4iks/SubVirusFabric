@@ -2,7 +2,10 @@ package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
 import com.subworld.subvirus.registry.materials.SubItemMaterials;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
+import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -19,9 +22,11 @@ public class SubItems {
     public static final Item INFECTED_STICK = register("infected_stick", Item::new, new Item.Settings());
 
     public static final Item UNCERTAIN_PICKAXE = register("uncertain_pickaxe", Item::new,
-            new Item.Settings().pickaxe(SubItemMaterials.INFECTED_TOOL_MATERIAL, 1, -2.8f));
+            new Item.Settings().enchantable(15).pickaxe(SubItemMaterials.INFECTED_TOOL_MATERIAL, 1, -2.8f));
+
+
     public static final Item UNCERTAIN_SWORD = register("uncertain_sword", Item::new,
-            new Item.Settings().sword(SubItemMaterials.INFECTED_TOOL_MATERIAL, 14, -2.4f));
+            new Item.Settings().enchantable(15).sword(SubItemMaterials.INFECTED_TOOL_MATERIAL, 14, -2.4f));
 
     public static void registerModItems() {
         SubVirus.LOGGER.debug("Регестрация предметов для" + SubVirus.MOD_ID);
