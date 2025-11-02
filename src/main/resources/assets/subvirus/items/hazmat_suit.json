@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "subvirus:item/hazmat_suit",
+    "model": {
+      "type": "geckolib:geckolib"
+    }
+  }
+}

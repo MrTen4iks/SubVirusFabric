@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": "subvirus:infected_ingot",
+    "S": "subvirus:infected_stick",
+    "B": "minecraft:heavy_core",
+    "N" :"minecraft:netherite_sword"
+  },
+  "pattern": [
+    "  B",
+    "IN ",
+    "SI "
+  ],
+  "result": {
+    "count": 1,
+    "id": "subvirus:uncertain_sword"
+  }
+}

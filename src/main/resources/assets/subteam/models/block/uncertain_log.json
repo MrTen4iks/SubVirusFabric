@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "subteam:block/infected_oak_log_top",
-    "side": "subteam:block/infected_oak_log"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "model": {
-    "type": "minecraft:special",
-    "base": "subteam:item/hazmat_suit",
-    "model": {
-      "type": "geckolib:geckolib"
-    }
-  }
-}
