@@ -1,4 +1,4 @@
-package com.subworld.subvirus.effect;
+package com.subworld.subvirus.world.effects;
 
 import com.subworld.subvirus.SubDamage;
 import net.minecraft.entity.LivingEntity;

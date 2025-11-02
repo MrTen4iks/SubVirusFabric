@@ -4,6 +4,7 @@
   "package": "com.subworld.subvirus.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "BasicItemModelMixin"
   ],
   "client": [
   ],

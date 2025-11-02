@@ -1,4 +1,4 @@
-package com.subworld.subvirus.item.items;
+package com.subworld.subvirus.world.items.armor;
 
 /*
 import net.minecraft.item.Item;
@@ -10,7 +10,6 @@ import software.bernie.geckolib.animation.PlayState;
 import software.bernie.geckolib.util.GeckoLibUtil;
 */
 
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.item.Item;
 
 

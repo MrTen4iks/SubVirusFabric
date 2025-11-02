@@ -1,6 +1,8 @@
-package com.subworld.subvirus.effect;
+package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
+import com.subworld.subvirus.world.effects.SubInfected;
+import com.subworld.subvirus.world.effects.UnknownEffect;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

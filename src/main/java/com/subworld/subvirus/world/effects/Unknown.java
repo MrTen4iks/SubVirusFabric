@@ -1,4 +1,4 @@
-package com.subworld.subvirus.effect;
+package com.subworld.subvirus.world.effects;
 
 
 import net.minecraft.entity.effect.StatusEffect;

@@ -1,6 +1,6 @@
 package com.subworld.subvirus;
 
-import com.subworld.subvirus.effect.SubEffects;
+import com.subworld.subvirus.registry.SubEffects;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Items;

@@ -1,29 +1,38 @@
 package com.subworld.subvirus.client.render.armor;
 
-import com.subworld.subvirus.item.SubItem;
-import com.subworld.subvirus.item.items.HazmatArmorElementItem;
+import com.subworld.subvirus.registry.SubArmors;
+import com.subworld.subvirus.registry.SubItems;
+import com.subworld.subvirus.world.items.armor.HazmatArmorElementItem;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import it.unimi.dsi.fastutil.objects.ObjectOpenHashSet;
 import net.minecraft.client.render.entity.state.BipedEntityRenderState;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
+import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import software.bernie.geckolib.renderer.base.GeoRenderState;
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
-
+import net.minecraft.client.render.entity.equipment.EquipmentModel.Dyeable;
 import java.util.Set;
+
+import net.minecraft.client.render.item.model.BasicItemModel;
+import software.bernie.geckolib.renderer.specialty.DyeableGeoArmorRenderer;
+
 
 import static com.subworld.subvirus.SubVirus.MOD_ID;
 
-public class HazmatArmorRenderer <R extends BipedEntityRenderState & GeoRenderState> extends GeoArmorRenderer<HazmatArmorElementItem, R> {
+public class HazmatArmorRenderer <R extends BipedEntityRenderState & GeoRenderState> extends DyeableGeoArmorRenderer<HazmatArmorElementItem, R> {
     public HazmatArmorRenderer(){
         super(new DefaultedItemGeoModel<>(Identifier.of(MOD_ID, "armor/hazmat_suit")));
 
         addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
+
+    private ItemStack currentStack = ItemStack.EMPTY;
 
     @Override
     public void addRenderData(HazmatArmorElementItem animatable, RenderData relatedObject, R renderState) {
@@ -38,13 +47,32 @@ public class HazmatArmorRenderer <R extends BipedEntityRenderState & GeoRenderSt
             }
 
             fullSetEffect = wornArmor.containsAll(ObjectArrayList.of(
-                    SubItem.HAZMAT_SUIT_BOOTS.asItem(),
-                    SubItem.HAZMAT_SUIT_HELMET.asItem(),
-                    SubItem.HAZMAT_SUIT_CHESTPLATE.asItem(),
-                    SubItem.HAZMAT_SUIT_LEGGINGS.asItem()
+                    SubArmors.HAZMAT_SUIT_BOOTS.asItem(),
+                    SubArmors.HAZMAT_SUIT_HELMET.asItem(),
+                    SubArmors.HAZMAT_SUIT_CHESTPLATE.asItem(),
+                    SubArmors.HAZMAT_SUIT_LEGGINGS.asItem()
             ));
         }
 
         renderState.addGeckolibData(HazmatArmorElementItem.HAS_FULL_SET_EFFECT, fullSetEffect);
+
+        if (relatedObject.itemStack() != null) {
+            this.currentStack = relatedObject.itemStack();
+        } else {
+            this.currentStack = ItemStack.EMPTY;
+        }
+
+    }
+    @Override
+    protected int getColorForBone(R renderState, GeoBone bone, int packedLight, int packedOverlay, int baseColour) {
+        if (!currentStack.isEmpty() && currentStack.getItem() instanceof HazmatArmorElementItem armor) {
+            return armor.getColor(currentStack);
+        }
+        return baseColour;
+    }
+
+    @Override
+    protected boolean isBoneDyeable(GeoBone geoBone) {
+        return true;
     }
 }

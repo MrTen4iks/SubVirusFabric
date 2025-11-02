@@ -1,6 +1,6 @@
-package com.subworld.subvirus.item;
+package com.subworld.subvirus.world.materials;
 
-import com.subworld.subvirus.util.SubTags;
+import com.subworld.subvirus.registry.SubTags;
 import net.minecraft.item.ToolMaterial;
 
 
@@ -13,7 +13,6 @@ public class SubItemMaterials {
             5.0F,
             22,
             SubTags.Items.INFECTED_INGOT_REPAIR);
-
 
 
 }

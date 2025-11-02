@@ -1,4 +1,4 @@
-package com.subworld.subvirus.util;
+package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
 import net.minecraft.block.Block;
@@ -28,6 +28,7 @@ public class SubTags {
         public static final TagKey<Item> INFECTED_INGOT_REPAIR = createTag("infected_ingot_repair");
         public static final TagKey<Item> REPAIRS_INFECTED_ARMOR = TagKey.of(Registries.ITEM.getKey(), Identifier.of(SubVirus.MOD_ID, "repairs_infected_armor"));
         public static final RegistryKey<EquipmentAsset> INFECTED_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(SubVirus.MOD_ID, "infected"));
+
 
 
         private static TagKey<Item> createTag(String name) {

@@ -1,4 +1,4 @@
-package com.subworld.subvirus.block;
+package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
 import net.minecraft.block.AbstractBlock;
@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.Function;
 
-public class SubBlock {
+public class SubBlocks {
     public static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
         RegistryKey<Block> blockKey = keyOfBlock(name);
         Block block = blockFactory.apply(settings.registryKey(blockKey));
