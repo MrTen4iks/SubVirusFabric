@@ -4,7 +4,7 @@ package com.subworld.subvirus.registry;
 import com.subworld.subvirus.SubVirus;
 import com.subworld.subvirus.world.items.armor.HazmatArmorElementItem;
 import com.subworld.subvirus.world.items.armor.HazmatArmorPackItem;
-import com.subworld.subvirus.world.materials.SubArmorMaterials;
+import com.subworld.subvirus.registry.materials.SubArmorMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;

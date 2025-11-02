@@ -25,14 +25,14 @@ import software.bernie.geckolib.renderer.specialty.DyeableGeoArmorRenderer;
 
 import static com.subworld.subvirus.SubVirus.MOD_ID;
 
-public class HazmatArmorRenderer <R extends BipedEntityRenderState & GeoRenderState> extends DyeableGeoArmorRenderer<HazmatArmorElementItem, R> {
+public class HazmatArmorRenderer <R extends BipedEntityRenderState & GeoRenderState> extends GeoArmorRenderer<HazmatArmorElementItem, R> {
     public HazmatArmorRenderer(){
         super(new DefaultedItemGeoModel<>(Identifier.of(MOD_ID, "armor/hazmat_suit")));
 
         addRenderLayer(new AutoGlowingGeoLayer<>(this));
     }
-
-    private ItemStack currentStack = ItemStack.EMPTY;
+    /// НУЖНО ДЛЯ РАСЦВЕТКИ С DyableGeoRenderer
+   // private ItemStack currentStack = ItemStack.EMPTY;
 
     @Override
     public void addRenderData(HazmatArmorElementItem animatable, RenderData relatedObject, R renderState) {
@@ -55,15 +55,16 @@ public class HazmatArmorRenderer <R extends BipedEntityRenderState & GeoRenderSt
         }
 
         renderState.addGeckolibData(HazmatArmorElementItem.HAS_FULL_SET_EFFECT, fullSetEffect);
-
-        if (relatedObject.itemStack() != null) {
+        /// НУЖНО ДЛЯ РАСЦВЕТКИ С DyableGeoRenderer
+     /*   if (relatedObject.itemStack() != null) {
             this.currentStack = relatedObject.itemStack();
         } else {
             this.currentStack = ItemStack.EMPTY;
-        }
+        }*/
 
     }
-    @Override
+    /// НУЖНО ДЛЯ РАСЦВЕТКИ С DyableGeoRenderer
+    /*@Override
     protected int getColorForBone(R renderState, GeoBone bone, int packedLight, int packedOverlay, int baseColour) {
         if (!currentStack.isEmpty() && currentStack.getItem() instanceof HazmatArmorElementItem armor) {
             return armor.getColor(currentStack);
@@ -74,5 +75,5 @@ public class HazmatArmorRenderer <R extends BipedEntityRenderState & GeoRenderSt
     @Override
     protected boolean isBoneDyeable(GeoBone geoBone) {
         return true;
-    }
+    }*/
 }

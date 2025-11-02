@@ -33,7 +33,7 @@ public class SubVirus implements ModInitializer {
         SubComponents.initialize();
 
        // var ignore = SubPotion.UNKNOWN_INFECTION_POTION;
-        SubPotion.spid();
+        SubPotions.spid();
 
         final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(SubVirus.MOD_ID, "sub_group"));
         final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
@@ -57,14 +57,14 @@ public class SubVirus implements ModInitializer {
             itemGroup.add(SubArmors.HAZMAT_SUIT_CHESTPLATE);
             itemGroup.add(SubArmors.HAZMAT_SUIT_HELMET);
             itemGroup.add(SubArmors.HAZMAT_SUIT_PACK);
-            itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotion.UNKNOWN_INFECTION_POTION));
-            itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotion.UNKNOWN_INFECTION_POTION));
-            itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotion.UNKNOWN_INFECTION_POTION));
-            itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotion.UNKNOWN_INFECTION_POTION));
-            itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotion.UNKNOWNS));
-            itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotion.UNKNOWNS));
-            itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotion.UNKNOWNS));
-            itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotion.UNKNOWNS));
+            itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotions.UNKNOWN_INFECTION_POTION));
+            itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotions.UNKNOWN_INFECTION_POTION));
+            itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotions.UNKNOWN_INFECTION_POTION));
+            itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotions.UNKNOWN_INFECTION_POTION));
+            itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotions.UNKNOWNS));
+            itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotions.UNKNOWNS));
+            itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotions.UNKNOWNS));
+            itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotions.UNKNOWNS));
 
 
         });

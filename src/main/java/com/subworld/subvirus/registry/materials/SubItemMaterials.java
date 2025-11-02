@@ -1,4 +1,4 @@
-package com.subworld.subvirus.world.materials;
+package com.subworld.subvirus.registry.materials;
 
 import com.subworld.subvirus.registry.SubTags;
 import net.minecraft.item.ToolMaterial;

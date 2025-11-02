@@ -1,7 +1,7 @@
 package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
-import com.subworld.subvirus.world.materials.SubItemMaterials;
+import com.subworld.subvirus.registry.materials.SubItemMaterials;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;

@@ -1,6 +1,6 @@
-package com.subworld.subvirus;
+package com.subworld.subvirus.registry;
 
-import com.subworld.subvirus.registry.SubEffects;
+import com.subworld.subvirus.SubVirus;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Items;
@@ -11,7 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
-public class SubPotion {
+public class SubPotions {
     public static final RegistryEntry<Potion> UNKNOWN_INFECTION_POTION = Registry.registerReference(
             Registries.POTION,
             Identifier.of(SubVirus.MOD_ID, "unknown_infection"),

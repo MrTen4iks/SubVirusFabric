@@ -29,7 +29,7 @@ import java.util.function.Consumer;
 
 import static com.subworld.subvirus.SubVirus.MOD_ID;
 
-public class HazmatArmorElementItem extends Item implements GeoItem, IDyeableItem {
+public class HazmatArmorElementItem extends Item implements GeoItem {
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
@@ -39,8 +39,8 @@ public class HazmatArmorElementItem extends Item implements GeoItem, IDyeableIte
     public HazmatArmorElementItem(Settings settings) {
         super(settings);
     }
-
-    public static final int defaultColor = 0xFF0000;
+    /// НУЖНО ДЛЯ РАСЦВЕТКИ С DyableGeoRenderer
+    // public static final int defaultColor = 0xFF0000;
 
     @Override
     public void createGeoRenderer(Consumer<GeoRenderProvider> consumer) {
@@ -78,7 +78,7 @@ public class HazmatArmorElementItem extends Item implements GeoItem, IDyeableIte
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return cache;
     }
-
+/*
     @Override
     public int getColor(ItemStack stack) {
         Integer r = stack.get(SubComponents.DYABLE_HAZMAT_COMPONENT);
@@ -96,5 +96,5 @@ public class HazmatArmorElementItem extends Item implements GeoItem, IDyeableIte
 
     public void clearColor(ItemStack stack) {
         stack.set(SubComponents.DYABLE_HAZMAT_COMPONENT,defaultColor);
-    }
+    }*/
 }

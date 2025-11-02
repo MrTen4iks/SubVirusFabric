@@ -1,19 +1,14 @@
-package com.subworld.subvirus.world.materials;
+package com.subworld.subvirus.registry.materials;
 
 
 import com.google.common.collect.Maps;
-import com.subworld.subvirus.registry.SubTags;
-import net.minecraft.item.Item;
 import net.minecraft.item.equipment.ArmorMaterial;
 import net.minecraft.item.equipment.EquipmentAssetKeys;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.client.render.entity.equipment.EquipmentRenderer;
-import java.util.Map;
 
-import static com.subworld.subvirus.registry.SubTags.Items.INFECTED_ARMOR_MATERIAL_KEY;
-import static com.subworld.subvirus.registry.SubTags.Items.REPAIRS_INFECTED_ARMOR;
+import java.util.Map;
 
 public class SubArmorMaterials {
     public static final int BASE_DURABILITY = 60;

@@ -17,13 +17,6 @@ public class SubComponents {
             Identifier.of(SubVirus.MOD_ID, "my_component"),
             ComponentType.<Integer>builder().codec(Codecs.RGB).build()
     );*/
-    public static final ComponentType<Integer> DYABLE_HAZMAT_COMPONENT = Registry.register(
-            Registries.DATA_COMPONENT_TYPE,
-            Identifier.of(SubVirus.MOD_ID, "dyable_hazmat_component"),
-            ComponentType.<Integer>builder()
-                    .codec(Codecs.RGB) // хранит как int RGB
-                    .build()
-    );
     public static void initialize() {
         SubVirus.LOGGER.info("Registering {} components", SubVirus.MOD_ID);
     }

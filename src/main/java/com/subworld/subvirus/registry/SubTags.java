@@ -29,8 +29,6 @@ public class SubTags {
         public static final TagKey<Item> REPAIRS_INFECTED_ARMOR = TagKey.of(Registries.ITEM.getKey(), Identifier.of(SubVirus.MOD_ID, "repairs_infected_armor"));
         public static final RegistryKey<EquipmentAsset> INFECTED_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(SubVirus.MOD_ID, "infected"));
 
-
-
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(SubVirus.MOD_ID, name));
         }
