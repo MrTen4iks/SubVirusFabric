@@ -34,5 +34,6 @@ public class SubInfected extends StatusEffect {
 
 
 
+
     }
 

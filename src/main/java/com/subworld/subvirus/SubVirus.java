@@ -65,7 +65,10 @@ public class SubVirus implements ModInitializer {
             itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotions.UNKNOWNS));
             itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotions.UNKNOWNS));
             itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotions.UNKNOWNS));
-
+            itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotions.PANACEA));
+            itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotions.PANACEA));
+            itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotions.PANACEA));
+            itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotions.PANACEA));
 
         });
 

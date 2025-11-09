@@ -19,6 +19,11 @@ public class SubEffects {
             "unknowns",
             new SubInfected()
     );
+    public static final RegistryEntry<StatusEffect> PANACEA = registerEffect(
+            "panacea",
+            new SubInfected()
+    );
+
 
     private static RegistryEntry<StatusEffect> registerEffect(String name, StatusEffect effect) {
         return Registry.registerReference(

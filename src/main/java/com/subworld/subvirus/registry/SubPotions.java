@@ -37,6 +37,18 @@ public class SubPotions {
                     )
             )
     );
+    public static final RegistryEntry<Potion> PANACEA = Registry.registerReference(
+            Registries.POTION,
+            Identifier.of(SubVirus.MOD_ID, "panacea"),
+            new Potion(
+                    "panacea",
+                    new StatusEffectInstance(
+                            SubEffects.PANACEA,
+                            3600,
+                            0
+                    )
+            )
+    );
 
     public static void spid() {
         FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
