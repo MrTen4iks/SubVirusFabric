@@ -1,10 +1,8 @@
 package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.PillarBlock;
+import com.subworld.subvirus.world.blocks.SubFacingBlockRaziv;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -42,6 +40,36 @@ public class SubBlocks {
             true,true
     );
 
+    public static final Block raziv1 = register( ///  myron
+            "raziv1",
+            SubFacingBlockRaziv::new,
+            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            true,true
+    );
+    public static final Block raziv2 = register( /// flaim
+            "raziv2",
+            SubFacingBlockRaziv::new,
+            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            true,true
+    );
+    public static final Block raziv3 = register( ///  guest
+            "raziv3",
+            SubFacingBlockRaziv::new,
+            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            true,true
+    );
+    public static final Block raziv4 = register( ///  ten4ik
+            "raziv4",
+            SubFacingBlockRaziv::new,
+            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            true,true
+    );
+    public static final Block raziv5 = register( /// zx
+            "raziv5",
+            SubFacingBlockRaziv::new,
+            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            true,true
+    );
 
 
     public static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem, boolean shouldRegisterItemToTab) {

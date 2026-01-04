@@ -16,8 +16,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 public class SubItemGroups {
-
-
     public static final AbstractTab SUB_TAB = new AbstractTab(
             RegistryKey.of(
                     Registries.ITEM_GROUP.getKey(),

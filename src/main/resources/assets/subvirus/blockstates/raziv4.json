@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=north": { "model": "subvirus:block/raziv4" },
+    "facing=south": { "model": "subvirus:block/raziv4", "y": 180 },
+    "facing=west":  { "model": "subvirus:block/raziv4", "y": 270 },
+    "facing=east":  { "model": "subvirus:block/raziv4", "y": 90 },
+    "facing=up":    { "model": "subvirus:block/raziv4", "x": 270 },
+    "facing=down":  { "model": "subvirus:block/raziv4", "x": 90 }
+  }
+}

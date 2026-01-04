@@ -1,0 +1,6 @@
+{
+  "parent": "subvirus:block/raziv1",
+  "textures": {
+    "0": "subvirus:block/raziv3"
+  }
+}
