@@ -3,7 +3,6 @@ package com.subworld.subvirus;
 
 import com.subworld.subvirus.registry.*;
 import com.subworld.subvirus.world.biomes.SubBiom;
-import com.subworld.subvirus.world.items.food.SubFood;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -31,14 +30,16 @@ public class SubVirus implements ModInitializer {
         SubEffects.registerModEffects();
         SubItems.registerModItems();
         SubBlocks.registerModBlocks();
-        SubArmors.registerModArmors();
+        //SubArmors.registerModArmors();
         SubComponents.initialize();
         SubBiom.registerModBiomes();
-        SubFood.registerModFoods();
+
+       // SubFood.registerModFoods();
        // var ignore = SubPotion.UNKNOWN_INFECTION_POTION;
         SubPotions.spid();
 
-        final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(SubVirus.MOD_ID, "sub_group"));
+        SubItemGroups.registerModTabs();
+        /*final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(SubVirus.MOD_ID, "sub_group"));
         final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
                 .icon(() -> new ItemStack(SubItems.INFECTED_INGOT))
                 .displayName(Text.translatable(MOD_ID+".group_trans"))
@@ -50,31 +51,36 @@ public class SubVirus implements ModInitializer {
             itemGroup.add(SubItems.INFECTED_DUST);
             itemGroup.add(SubItems.INFECTED_STICK);
             itemGroup.add(SubBlocks.INFECTED_ORE.asItem());
+
             itemGroup.add(SubBlocks.UNCERTAIN_BLOCK.asItem());
             itemGroup.add(SubBlocks.UNCERTAIN_LOG.asItem());
             itemGroup.add(SubBlocks.UNCERTAIN_PLANKS.asItem());
-            itemGroup.add(SubItems.UNCERTAIN_PICKAXE);
-            itemGroup.add(SubItems.UNCERTAIN_SWORD);
-            itemGroup.add(SubArmors.HAZMAT_SUIT_BOOTS);
-            itemGroup.add(SubArmors.HAZMAT_SUIT_LEGGINGS);
-            itemGroup.add(SubArmors.HAZMAT_SUIT_CHESTPLATE);
-            itemGroup.add(SubArmors.HAZMAT_SUIT_HELMET);
-            itemGroup.add(SubArmors.HAZMAT_SUIT_PACK);
-            itemGroup.add(SubFood.PANACEA_STEW);
+            itemGroup.add(SubItems.Tools.UNCERTAIN_PICKAXE);
+            itemGroup.add(SubItems.Tools.UNCERTAIN_SWORD);
+
+            itemGroup.add(SubItems.Armors.HAZMAT_SUIT_BOOTS);
+            itemGroup.add(SubItems.Armors.HAZMAT_SUIT_LEGGINGS);
+            itemGroup.add(SubItems.Armors.HAZMAT_SUIT_CHESTPLATE);
+            itemGroup.add(SubItems.Armors.HAZMAT_SUIT_HELMET);
+            itemGroup.add(SubItems.Armors.HAZMAT_SUIT_PACK);
+
+            itemGroup.add(SubItems.Foods.PANACEA_STEW);
             itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotions.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotions.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotions.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotions.UNKNOWN_INFECTION_POTION));
+
             itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotions.UNKNOWNS));
             itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotions.UNKNOWNS));
             itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotions.UNKNOWNS));
             itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotions.UNKNOWNS));
             itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotions.PANACEA));
+
             itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotions.PANACEA));
             itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotions.PANACEA));
             itemGroup.add(PotionContentsComponent.createStack(Items.TIPPED_ARROW, SubPotions.PANACEA));
 
-        });
+        });*/
 
 
     }

@@ -1,6 +1,5 @@
 package com.subworld.subvirus.client.render.armor;
 
-import com.subworld.subvirus.registry.SubArmors;
 import com.subworld.subvirus.registry.SubItems;
 import com.subworld.subvirus.world.items.armor.HazmatArmorElementItem;
 import it.unimi.dsi.fastutil.objects.ObjectArrayList;
@@ -9,18 +8,13 @@ import net.minecraft.client.render.entity.state.BipedEntityRenderState;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.decoration.ArmorStandEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
-import software.bernie.geckolib.cache.object.GeoBone;
 import software.bernie.geckolib.model.DefaultedItemGeoModel;
 import software.bernie.geckolib.renderer.GeoArmorRenderer;
 import software.bernie.geckolib.renderer.base.GeoRenderState;
 import software.bernie.geckolib.renderer.layer.AutoGlowingGeoLayer;
-import net.minecraft.client.render.entity.equipment.EquipmentModel.Dyeable;
-import java.util.Set;
 
-import net.minecraft.client.render.item.model.BasicItemModel;
-import software.bernie.geckolib.renderer.specialty.DyeableGeoArmorRenderer;
+import java.util.Set;
 
 
 import static com.subworld.subvirus.SubVirus.MOD_ID;
@@ -47,10 +41,10 @@ public class HazmatArmorRenderer <R extends BipedEntityRenderState & GeoRenderSt
             }
 
             fullSetEffect = wornArmor.containsAll(ObjectArrayList.of(
-                    SubArmors.HAZMAT_SUIT_BOOTS.asItem(),
-                    SubArmors.HAZMAT_SUIT_HELMET.asItem(),
-                    SubArmors.HAZMAT_SUIT_CHESTPLATE.asItem(),
-                    SubArmors.HAZMAT_SUIT_LEGGINGS.asItem()
+                    SubItems.HAZMAT_SUIT_BOOTS.asItem(),
+                    SubItems.HAZMAT_SUIT_HELMET.asItem(),
+                    SubItems.HAZMAT_SUIT_CHESTPLATE.asItem(),
+                    SubItems.HAZMAT_SUIT_LEGGINGS.asItem()
             ));
         }
 

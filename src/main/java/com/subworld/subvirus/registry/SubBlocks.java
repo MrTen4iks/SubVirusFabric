@@ -1,6 +1,7 @@
 package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.PillarBlock;
@@ -16,7 +17,34 @@ import net.minecraft.util.Identifier;
 import java.util.function.Function;
 
 public class SubBlocks {
-    public static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
+    public static final Block INFECTED_ORE = register(
+            "infected_ore",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5.0F,5.0F),
+            true,true
+    );
+    public static final Block UNCERTAIN_BLOCK = register(
+            "uncertain_block",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(4.0F,4.0F),
+            true,true
+    );
+    public static final Block UNCERTAIN_LOG = register(
+            "uncertain_log",
+            PillarBlock::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
+            true,true
+    );
+    public static final Block UNCERTAIN_PLANKS = register(
+            "uncertain_planks",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
+            true,true
+    );
+
+
+
+    public static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem, boolean shouldRegisterItemToTab) {
         RegistryKey<Block> blockKey = keyOfBlock(name);
         Block block = blockFactory.apply(settings.registryKey(blockKey));
         if (shouldRegisterItem) {
@@ -25,7 +53,12 @@ public class SubBlocks {
             BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey).useBlockPrefixedTranslationKey());
             Registry.register(Registries.ITEM, itemKey, blockItem);
         }
-        return Registry.register(Registries.BLOCK, blockKey, block);
+
+        Block b = Registry.register(Registries.BLOCK, blockKey, block);
+        if (shouldRegisterItemToTab) {
+            SubItemGroups.SUB_TAB.add(b.asItem());
+        }
+        return b;
     }
 
     public static RegistryKey<Block> keyOfBlock(String name) {
@@ -33,37 +66,10 @@ public class SubBlocks {
     }
 
     public static RegistryKey<Item> keyOfItem(String name) {
-            return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SubVirus.MOD_ID, name));
+        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SubVirus.MOD_ID, name));
     }
-
-
-    public static final Block INFECTED_ORE = register(
-            "infected_ore",
-            Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5.0F,5.0F),
-            true
-    );
-    public static final Block UNCERTAIN_BLOCK = register(
-            "uncertain_block",
-            Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(4.0F,4.0F),
-            true
-    );
-    public static final Block UNCERTAIN_LOG = register(
-            "uncertain_log",
-            PillarBlock::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
-            true
-    );
-    public static final Block UNCERTAIN_PLANKS = register(
-            "uncertain_planks",
-            Block::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
-            true
-    );
-
     public static void registerModBlocks() {
-        SubVirus.LOGGER.debug("Регестрация предметов для" + SubVirus.MOD_ID);
+        SubVirus.LOGGER.debug("Registering blocks for" + SubVirus.MOD_ID);
     }
 }
 

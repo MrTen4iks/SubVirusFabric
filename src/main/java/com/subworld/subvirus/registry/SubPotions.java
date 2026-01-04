@@ -2,6 +2,7 @@ package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
+import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Items;
 import net.minecraft.potion.Potion;
@@ -12,8 +13,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
 public class SubPotions {
-    public static final RegistryEntry<Potion> UNKNOWN_INFECTION_POTION = Registry.registerReference(
-            Registries.POTION,
+    public static final RegistryEntry<Potion> UNKNOWN_INFECTION_POTION = register(
             Identifier.of(SubVirus.MOD_ID, "unknown_infection"),
             new Potion(
                     "unknown_infection",
@@ -22,11 +22,11 @@ public class SubPotions {
                             3600,
                             0
                     )
-            )
+            ),
+            true
     );
 
-    public static final RegistryEntry<Potion> UNKNOWNS = Registry.registerReference(
-            Registries.POTION,
+    public static final RegistryEntry<Potion> UNKNOWNS = register(
             Identifier.of(SubVirus.MOD_ID, "unknowns"),
             new Potion(
                     "unknowns",
@@ -35,10 +35,10 @@ public class SubPotions {
                             3600,
                             0
                     )
-            )
+            ),
+            true
     );
-    public static final RegistryEntry<Potion> PANACEA = Registry.registerReference(
-            Registries.POTION,
+    public static final RegistryEntry<Potion> PANACEA = register(
             Identifier.of(SubVirus.MOD_ID, "panacea"),
             new Potion(
                     "panacea",
@@ -47,16 +47,23 @@ public class SubPotions {
                             3600,
                             0
                     )
-            )
+            ),
+            true
     );
 
+    public static RegistryEntry<Potion> register( Identifier id, Potion entry, boolean shouldAddToTab){
+        RegistryEntry<Potion> t = Registry.registerReference( Registries.POTION,id,entry);
+        if (shouldAddToTab) {
+            SubItemGroups.SUB_TAB.add(PotionContentsComponent.createStack(Items.POTION, t));
+        }
+        return t;
+    }
+
     public static void spid() {
-        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> {
-            builder.registerPotionRecipe(
-                    Potions.POISON,                // input
-                    Items.BEDROCK,                 // ingredient
-                    UNKNOWN_INFECTION_POTION       // output (now a RegistryEntry<Potion>)
-            );
-        });
+        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> builder.registerPotionRecipe(
+                Potions.POISON,                // input
+                Items.BEDROCK,                 // ingredient
+                UNKNOWN_INFECTION_POTION       // output (now a RegistryEntry<Potion>)
+        ));
     }
 }
