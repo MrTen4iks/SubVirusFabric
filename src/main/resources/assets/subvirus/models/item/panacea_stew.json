@@ -2,9 +2,9 @@
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "panacea_stew_3d",
-		"2": "bowl_3d",
-		"particle": "bowl_3d"
+		"1": "subvirus:item/panacea_stew_3d",
+		"2": "subvirus:item/bowl_3d",
+		"particle": "subvirus:item/bowl_3d"
 	},
 	"elements": [
 		{
