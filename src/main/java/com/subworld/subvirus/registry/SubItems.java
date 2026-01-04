@@ -21,6 +21,7 @@ public class SubItems {
     public static final Item INFECTED_DUST = register("infected_dust", Item::new, new Item.Settings());
     public static final Item INFECTED_STICK = register("infected_stick", Item::new, new Item.Settings());
 
+
     public static final Item UNCERTAIN_PICKAXE = register("uncertain_pickaxe", Item::new,
             new Item.Settings().enchantable(15).pickaxe(SubItemMaterials.INFECTED_TOOL_MATERIAL, 1, -2.8f));
 

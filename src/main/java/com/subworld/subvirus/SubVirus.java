@@ -2,6 +2,8 @@ package com.subworld.subvirus;
 
 
 import com.subworld.subvirus.registry.*;
+import com.subworld.subvirus.world.biomes.SubBiom;
+import com.subworld.subvirus.world.items.food.SubFood;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -31,7 +33,8 @@ public class SubVirus implements ModInitializer {
         SubBlocks.registerModBlocks();
         SubArmors.registerModArmors();
         SubComponents.initialize();
-
+        SubBiom.registerModBiomes();
+        SubFood.registerModFoods();
        // var ignore = SubPotion.UNKNOWN_INFECTION_POTION;
         SubPotions.spid();
 
@@ -57,6 +60,7 @@ public class SubVirus implements ModInitializer {
             itemGroup.add(SubArmors.HAZMAT_SUIT_CHESTPLATE);
             itemGroup.add(SubArmors.HAZMAT_SUIT_HELMET);
             itemGroup.add(SubArmors.HAZMAT_SUIT_PACK);
+            itemGroup.add(SubFood.PANACEA_STEW);
             itemGroup.add(PotionContentsComponent.createStack(Items.POTION, SubPotions.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.SPLASH_POTION, SubPotions.UNKNOWN_INFECTION_POTION));
             itemGroup.add(PotionContentsComponent.createStack(Items.LINGERING_POTION, SubPotions.UNKNOWN_INFECTION_POTION));
