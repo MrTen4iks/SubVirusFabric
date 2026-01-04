@@ -3,15 +3,21 @@ package com.subworld.subvirus.registry;
 import com.subworld.subvirus.SubVirus;
 import com.subworld.subvirus.world.blocks.SubFacingBlockRaziv;
 import net.minecraft.block.*;
+import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class SubBlocks {
@@ -66,6 +72,12 @@ public class SubBlocks {
     );
     public static final Block raziv5 = register( /// zx
             "raziv5",
+            SubFacingBlockRaziv::new,
+            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            true,true
+    );
+    public static final Block raziv6 = register( /// Лэй
+            "raziv6",
             SubFacingBlockRaziv::new,
             AbstractBlock.Settings.create().nonOpaque().noCollision(),
             true,true
