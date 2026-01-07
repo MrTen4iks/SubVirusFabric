@@ -2,112 +2,134 @@ package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
 import com.subworld.subvirus.world.blocks.SubFacingBlockRaziv;
+import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.minecraft.block.*;
-import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
-import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
-
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class SubBlocks {
-    public static final Block INFECTED_ORE = register(
+    public static final BlockItemPair INFECTED_ORE = register(
             "infected_ore",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5.0F,5.0F),
-            true,true
+            new Item.Settings(),true
     );
-    public static final Block UNCERTAIN_BLOCK = register(
+    public static final BlockItemPair UNCERTAIN_BLOCK = register(
             "uncertain_block",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(4.0F,4.0F),
-            true,true
+            new Item.Settings(),true
     );
-    public static final Block UNCERTAIN_LOG = register(
+    public static final BlockItemPair UNCERTAIN_LOG = register(
             "uncertain_log",
             PillarBlock::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
-            true,true
+            new Item.Settings(),true
     );
-    public static final Block UNCERTAIN_PLANKS = register(
+    public static final BlockItemPair UNCERTAIN_PLANKS = register(
             "uncertain_planks",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
-            true,true
+            new Item.Settings(),true
     );
 
-    public static final Block raziv1 = register( ///  myron
+    public static final BlockItemPair raziv1 = register( ///  myron
             "raziv1",
             SubFacingBlockRaziv::new,
             AbstractBlock.Settings.create().nonOpaque().noCollision(),
-            true,true
+            new Item.Settings(),true,true
     );
-    public static final Block raziv2 = register( /// flaim
+    public static final BlockItemPair raziv2 = register( /// flaim
             "raziv2",
             SubFacingBlockRaziv::new,
             AbstractBlock.Settings.create().nonOpaque().noCollision(),
-            true,true
+            new Item.Settings(),true,true
     );
-    public static final Block raziv3 = register( ///  guest
+    public static final BlockItemPair raziv3 = register( ///  guest
             "raziv3",
             SubFacingBlockRaziv::new,
             AbstractBlock.Settings.create().nonOpaque().noCollision(),
-            true,true
+            new Item.Settings(),true,true
     );
-    public static final Block raziv4 = register( ///  ten4ik
+    public static final BlockItemPair raziv4 = register( ///  ten4ik
             "raziv4",
             SubFacingBlockRaziv::new,
             AbstractBlock.Settings.create().nonOpaque().noCollision(),
-            true,true
+            new Item.Settings(),true,true
     );
-    public static final Block raziv5 = register( /// zx
+    public static final BlockItemPair raziv5 = register( /// zx
             "raziv5",
             SubFacingBlockRaziv::new,
             AbstractBlock.Settings.create().nonOpaque().noCollision(),
-            true,true
+            new Item.Settings(),true,true
     );
-    public static final Block raziv6 = register( /// Лэй
+    public static final BlockItemPair raziv6 = register( /// Лэй
             "raziv6",
             SubFacingBlockRaziv::new,
             AbstractBlock.Settings.create().nonOpaque().noCollision(),
-            true,true
+            new Item.Settings(),true,true
     );
 
-
-    public static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem, boolean shouldRegisterItemToTab) {
-        RegistryKey<Block> blockKey = keyOfBlock(name);
+    //Пожалуста этот шницель фаршен код был написан в попыхах и главное что работает а щас мне нах лень что то переписывать и вообще нужно было с нуля абстракцию настраивать и аналог дефферед регистра иначе я хз как этот макоронный код впорядок привести
+    public static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings) {
+        RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SubVirus.MOD_ID, name));
         Block block = blockFactory.apply(settings.registryKey(blockKey));
-        if (shouldRegisterItem) {
-            RegistryKey<Item> itemKey = keyOfItem(name);
 
-            BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey).useBlockPrefixedTranslationKey());
-            Registry.register(Registries.ITEM, itemKey, blockItem);
-        }
-
+        return Registry.register(Registries.BLOCK, blockKey, block);
+    }
+    public static BlockItemPair register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings,  Item.Settings is, boolean shouldRegisterItemToTab) {
+        // register block
+        RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SubVirus.MOD_ID, name));
+        Block block = blockFactory.apply(settings.registryKey(blockKey));
         Block b = Registry.register(Registries.BLOCK, blockKey, block);
+
+        // register item
+        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SubVirus.MOD_ID, name));
+        BlockItem blockItem = new BlockItem(block, is.registryKey(itemKey).useBlockPrefixedTranslationKey());
+        Item i = Registry.register(Registries.ITEM, itemKey, blockItem);
+
+        //register to tab
         if (shouldRegisterItemToTab) {
             SubItemGroups.SUB_TAB.add(b.asItem());
         }
-        return b;
-    }
 
-    public static RegistryKey<Block> keyOfBlock(String name) {
-        return RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SubVirus.MOD_ID, name));
+        return new BlockItemPair(b,i);
     }
+    public static BlockItemPair register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings,  Item.Settings is, boolean shouldRegisterItemToTab, boolean shouldRegisterLore) {
+        // register block
+        RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(SubVirus.MOD_ID, name));
+        Block block = blockFactory.apply(settings.registryKey(blockKey));
+        Block b = Registry.register(Registries.BLOCK, blockKey, block);
 
-    public static RegistryKey<Item> keyOfItem(String name) {
-        return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SubVirus.MOD_ID, name));
+        // register item
+        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SubVirus.MOD_ID, name));
+        BlockItem blockItem = new BlockItem(block, is.registryKey(itemKey).useBlockPrefixedTranslationKey());
+        Item i = Registry.register(Registries.ITEM, itemKey, blockItem);
+
+        //register to tab
+        if (shouldRegisterItemToTab) {
+            SubItemGroups.SUB_TAB.add(b.asItem());
+        }
+
+        // register lore
+        if (shouldRegisterLore) {
+            ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, lines) -> {
+                if (itemStack.isOf(i)) {
+                    lines.add(Text.translatable("item." + SubVirus.MOD_ID + "." + name + ".description"));
+                }
+            });
+        }
+        return new BlockItemPair(b,i);
     }
+    public record BlockItemPair(Block block, Item item){}
     public static void registerModBlocks() {
         SubVirus.LOGGER.debug("Registering blocks for" + SubVirus.MOD_ID);
     }

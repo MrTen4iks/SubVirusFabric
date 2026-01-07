@@ -1,6 +1,7 @@
 {
   "parent": "subvirus:block/raziv1",
   "textures": {
-    "0": "subvirus:block/raziv3"
+    "0": "subvirus:block/raziv3",
+    "particle": "subvirus:block/raziv3"
   }
 }

@@ -4,7 +4,7 @@
   "texture_size": [736, 1026],
   "textures": {
     "0": "subvirus:block/raziv1",
-    "particle": "minecraft:block/air"
+    "particle": "subvirus:block/myron_empty"
   },
   "elements": [
     {
