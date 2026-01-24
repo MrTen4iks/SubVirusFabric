@@ -1,0 +1,17 @@
+﻿{
+    "key":  {
+                "#":  "subvirus:infected_stick",
+                "X":  "#minecraft:gold_tool_materials"
+            },
+    "category":  "equipment",
+    "pattern":  [
+                    "XX",
+                    " #",
+                    " #"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:golden_hoe"
+               },
+    "type":  "minecraft:crafting_shaped"
+}

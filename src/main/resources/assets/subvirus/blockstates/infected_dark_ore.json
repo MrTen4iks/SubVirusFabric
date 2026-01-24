@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "subvirus:block/infected_dark_ore"
+    }
+  }
+}

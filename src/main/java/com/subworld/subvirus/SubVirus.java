@@ -42,7 +42,7 @@ public class SubVirus implements ModInitializer {
 
        // SubFood.registerModFoods();
        // var ignore = SubPotion.UNKNOWN_INFECTION_POTION;
-        SubPotions.spid();
+        SubPotions.registerModPotions();
 
         SubItemGroups.registerModTabs();
         /*final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(SubVirus.MOD_ID, "sub_group"));

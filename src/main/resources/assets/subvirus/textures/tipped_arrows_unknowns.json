@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "APA",
+    "AAA"
+  ],
+  "key": {
+    "A": "minecraft:arrow",
+    "P": {
+      "item": "minecraft:lingering_potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "subvirus:unknowns"
+        }
+      }
+    }
+  },
+  "result": {
+    "id": "minecraft:tipped_arrow",
+    "count": 8,
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "subvirus:unknowns"
+      }
+    }
+  }
+}

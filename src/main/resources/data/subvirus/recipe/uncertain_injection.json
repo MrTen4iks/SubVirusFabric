@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P",
+    "A "
+  ],
+  "key": {
+    "A": "subvirus:injection",
+    "P": {
+      "item": "minecraft:lingering_potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "subvirus:unknowns"
+        }
+      }
+    }
+  },
+  "result": {
+    "id": "subvirus:uncertain_injection",
+    "count": 1,
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "subvirus:unknowns"
+      }
+    }
+  }
+}

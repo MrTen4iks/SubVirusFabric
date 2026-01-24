@@ -2,6 +2,7 @@ package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
+import net.minecraft.block.Portal;
 import net.minecraft.component.type.PotionContentsComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.Items;
@@ -59,11 +60,11 @@ public class SubPotions {
         return t;
     }
 
-    public static void spid() {
-        FabricBrewingRecipeRegistryBuilder.BUILD.register(builder -> builder.registerPotionRecipe(
-                Potions.POISON,                // input
-                Items.BEDROCK,                 // ingredient
-                UNKNOWN_INFECTION_POTION       // output (now a RegistryEntry<Potion>)
-        ));
+    public static void registerModPotions() {
+
+        SubVirus.LOGGER.debug("Регестрация зелей для" + SubVirus.MOD_ID);
     }
+
+
+
 }

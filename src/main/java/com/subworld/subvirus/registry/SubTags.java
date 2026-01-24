@@ -16,6 +16,8 @@ public class SubTags {
     public static class Blocks {
         public static final TagKey<Block> NEEDS_INFECTED_TOOL = createTag("needs_infected_tool");
         public static final TagKey<Block> INCORRECT_FOR_INFECTED_TOOL = createTag("incorrect_for_infected_tool");
+        public static final TagKey<Block> INFECTABLE_ORES = createTag("infectable_ores");
+        public static final TagKey<Block> INFECTABLE_RAW_ORE_BLOCKS = createTag("infectable_raw_ore_blocks");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(SubVirus.MOD_ID, name));

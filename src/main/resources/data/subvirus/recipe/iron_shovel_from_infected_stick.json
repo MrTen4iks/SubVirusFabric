@@ -1,0 +1,17 @@
+﻿{
+    "key":  {
+                "#":  "subvirus:infected_stick",
+                "X":  "#minecraft:iron_tool_materials"
+            },
+    "category":  "equipment",
+    "pattern":  [
+                    "X",
+                    "#",
+                    "#"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:iron_shovel"
+               },
+    "type":  "minecraft:crafting_shaped"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#NE",
+    "gPn",
+    "SH/"
+  ],
+  "key": {
+    "#": "minecraft:breeze_rod",
+    "N": "minecraft:nether_star",
+    "E": "minecraft:enchanted_golden_apple",
+    "g": "subvirus:infected_ingot",
+    "P": "subvirus:uncertain_injection",
+    "n": "minecraft:netherite_ingot",
+    "S": "minecraft:ender_eye",
+    "H": "minecraft:heavy_core",
+    "/": "minecraft:blaze_rod"
+  },
+  "result": {
+    "id": "subvirus:panacea_stew",
+    "count": 1
+  }
+}

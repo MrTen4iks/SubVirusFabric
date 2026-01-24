@@ -1,0 +1,17 @@
+﻿{
+    "key":  {
+                "#":  "subvirus:infected_stick",
+                "X":  "#minecraft:diamond_tool_materials"
+            },
+    "category":  "equipment",
+    "pattern":  [
+                    "XX",
+                    " #",
+                    " #"
+                ],
+    "result":  {
+                   "count":  1,
+                   "id":  "minecraft:diamond_hoe"
+               },
+    "type":  "minecraft:crafting_shaped"
+}

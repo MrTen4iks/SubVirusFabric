@@ -1,9 +1,11 @@
 package com.subworld.subvirus.registry;
 
 import com.subworld.subvirus.SubVirus;
+import com.subworld.subvirus.world.blocks.InfectedTntBlock;
 import com.subworld.subvirus.world.blocks.SubFacingBlockRaziv;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.minecraft.block.*;
+import net.minecraft.client.resource.language.I18n;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -13,6 +15,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import java.util.List;
 import java.util.function.Function;
 
 public class SubBlocks {
@@ -20,6 +23,12 @@ public class SubBlocks {
             "infected_ore",
             Block::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(5.0F,5.0F),
+            new Item.Settings(),true
+    );
+    public static final BlockItemPair INFECTED_DARK_ORE = register(
+            "infected_dark_ore",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(7.0F,7.0F),
             new Item.Settings(),true
     );
     public static final BlockItemPair UNCERTAIN_BLOCK = register(
@@ -31,7 +40,7 @@ public class SubBlocks {
     public static final BlockItemPair UNCERTAIN_LOG = register(
             "uncertain_log",
             PillarBlock::new,
-            AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).strength(4.0F,4.0F),
             new Item.Settings(),true
     );
     public static final BlockItemPair UNCERTAIN_PLANKS = register(
@@ -40,41 +49,47 @@ public class SubBlocks {
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
             new Item.Settings(),true
     );
+    public static final BlockItemPair UNCERTAIN_TNT = register(
+            "uncertain_tnt",
+            InfectedTntBlock::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS).strength(0.0F,0.0F),
+            new Item.Settings(),true
+    );
 
     public static final BlockItemPair raziv1 = register( ///  myron
             "raziv1",
             SubFacingBlockRaziv::new,
-            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            AbstractBlock.Settings.create().nonOpaque().noCollision().luminance(state -> 15),
             new Item.Settings(),true,true
     );
     public static final BlockItemPair raziv2 = register( /// flaim
             "raziv2",
             SubFacingBlockRaziv::new,
-            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            AbstractBlock.Settings.create().nonOpaque().noCollision().luminance(state -> 15),
             new Item.Settings(),true,true
     );
     public static final BlockItemPair raziv3 = register( ///  guest
             "raziv3",
             SubFacingBlockRaziv::new,
-            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            AbstractBlock.Settings.create().nonOpaque().noCollision().luminance(state -> 15),
             new Item.Settings(),true,true
     );
     public static final BlockItemPair raziv4 = register( ///  ten4ik
             "raziv4",
             SubFacingBlockRaziv::new,
-            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            AbstractBlock.Settings.create().nonOpaque().noCollision().luminance(state -> 15),
             new Item.Settings(),true,true
     );
     public static final BlockItemPair raziv5 = register( /// zx
             "raziv5",
             SubFacingBlockRaziv::new,
-            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            AbstractBlock.Settings.create().nonOpaque().noCollision().luminance(state -> 15),
             new Item.Settings(),true,true
     );
     public static final BlockItemPair raziv6 = register( /// Лэй
             "raziv6",
             SubFacingBlockRaziv::new,
-            AbstractBlock.Settings.create().nonOpaque().noCollision(),
+            AbstractBlock.Settings.create().nonOpaque().noCollision().luminance(state -> 15),
             new Item.Settings(),true,true
     );
 
@@ -94,6 +109,7 @@ public class SubBlocks {
         // register item
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SubVirus.MOD_ID, name));
         BlockItem blockItem = new BlockItem(block, is.registryKey(itemKey).useBlockPrefixedTranslationKey());
+
         Item i = Registry.register(Registries.ITEM, itemKey, blockItem);
 
         //register to tab
@@ -123,17 +139,27 @@ public class SubBlocks {
         if (shouldRegisterLore) {
             ItemTooltipCallback.EVENT.register((itemStack, tooltipContext, tooltipType, lines) -> {
                 if (itemStack.isOf(i)) {
-                    lines.add(Text.translatable("item." + SubVirus.MOD_ID + "." + name + ".description"));
+                    addDescriptionLines("item." + SubVirus.MOD_ID + "." + name + ".description", lines);
                 }
             });
         }
         return new BlockItemPair(b,i);
     }
+    private static void addDescriptionLines(String baseKey, List<Text> lines) {
+        int insertIndex = Math.min(1, lines.size());
+        for (int i = 0; i < 4; i++) {
+            String key = i == 0 ? baseKey : baseKey + (i + 1);
+            if (I18n.hasTranslation(key)) {
+                lines.add(insertIndex, Text.translatable(key));
+                insertIndex++;
+            }
+        }
+    }
+
     public record BlockItemPair(Block block, Item item){}
     public static void registerModBlocks() {
         SubVirus.LOGGER.debug("Registering blocks for" + SubVirus.MOD_ID);
     }
+
+
 }
-
-
-

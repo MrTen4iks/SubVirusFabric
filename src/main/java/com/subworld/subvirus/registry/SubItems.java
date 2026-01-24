@@ -36,7 +36,8 @@ public class SubItems {
     public static final Item INFECTED_INGOT = register("infected_ingot", Item::new, new Item.Settings(),true);
     public static final Item INFECTED_DUST = register("infected_dust", Item::new, new Item.Settings(),true);
     public static final Item INFECTED_STICK = register("infected_stick", Item::new, new Item.Settings(),true);
-
+    public static final Item UNCERTAIN_INJECTION= register("uncertain_injection", Item::new, new Item.Settings(),true);
+    public static final Item INJECTION= register("injection", Item::new, new Item.Settings(),true);
 
     /// ------------ === +++ ||| Tools ||| +++ === ------------
 
