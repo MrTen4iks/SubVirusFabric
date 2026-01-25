@@ -49,6 +49,24 @@ public class SubBlocks {
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
             new Item.Settings(),true
     );
+    public static final BlockItemPair UNCERTAIN_DIRT = register(
+            "uncertain_dirt",
+            Block::new,
+            AbstractBlock.Settings.copy(Blocks.DIRT),
+            new Item.Settings(),true
+    );
+    public static final BlockItemPair UNCERTAIN_GRASS_BLOCK = register(
+            "uncertain_grass_block",
+            GrassBlock::new,
+            AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK),
+            new Item.Settings(),true
+    );
+    public static final BlockItemPair UNCERTAIN_DIRT_PATH = register(
+            "uncertain_dirt_path",
+            DirtPathBlock::new,
+            AbstractBlock.Settings.copy(Blocks.DIRT_PATH),
+            new Item.Settings(),true
+    );
     public static final BlockItemPair UNCERTAIN_TNT = register(
             "uncertain_tnt",
             InfectedTntBlock::new,

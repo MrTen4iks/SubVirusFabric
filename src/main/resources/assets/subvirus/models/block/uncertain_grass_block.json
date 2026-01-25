@@ -1,0 +1,10 @@
+
+{
+  "parent": "minecraft:block/grass_block",
+  "textures": {
+    "bottom": "subvirus:block/uncertain_dirt",
+    "top": "subvirus:block/uncertain_grass_block_top",
+    "side": "subvirus:block/uncertain_grass_block_side",
+    "overlay": "subvirus:block/uncertain_grass_block_side"
+  }
+}
