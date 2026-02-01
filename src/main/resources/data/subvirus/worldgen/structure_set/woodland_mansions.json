@@ -1,0 +1,15 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 10387319,
+    "separation": 28,
+    "spacing": 113,
+    "spread_type": "triangular"
+  },
+  "structures": [
+    {
+      "structure": "subvirus:mansion",
+      "weight": 1
+    }
+  ]
+}

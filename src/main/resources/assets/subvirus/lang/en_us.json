@@ -1,11 +1,10 @@
-{
-  "block.subvirus.raziv1": "Raziv — Myron",
-  "block.subvirus.raziv2": "Raziv — Flaim",
-  "block.subvirus.raziv3": "Raziv — Guest",
-  "block.subvirus.raziv4": "Raziv — Ten4ik",
-  "block.subvirus.raziv5": "Raziv — ZX",
-  "block.subvirus.raziv6": "Raziv — Lay",
-  "itemTooltip.subvirus.raziv1": "Raziv — Lay",
+﻿{
+  "block.subvirus.raziv1": "Raziv - Myron",
+  "block.subvirus.raziv2": "Raziv - Flaim",
+  "block.subvirus.raziv3": "Raziv - Guest",
+  "block.subvirus.raziv4": "Raziv - Ten4ik",
+  "block.subvirus.raziv5": "Raziv - ZX",
+  "block.subvirus.raziv6": "Raziv - Lay",
   "item.subvirus.raziv1.description": "Wanted for the total theft of all milk in the city, including milk from NPC fridges,",
   "item.subvirus.raziv1.description2": "quest milk, and milk that <never even existed>.",
   "item.subvirus.raziv1.description3": "Also suspected of mass castration of all the city's cats.",
@@ -45,6 +44,7 @@
   "item.subvirus.injection": "Injection",
   "item.subvirus.infected_raw": "Raw infection",
   "item.subvirus.infected_dust": "Infected dust",
+  "item.subvirus.uncertain_eye": "Uncertain Eye",
   "item.subvirus.infected_stick": "Infected stick",
   "item.subvirus.panacea_stew": "test",
   "item.subvirus.uncertain_pickaxe": "Uncertain Pickaxe",
@@ -63,9 +63,20 @@
   "block.subvirus.uncertain_grass_block": "Uncertain grass",
   "block.subvirus.uncertain_dirt": "Uncertain dirt",
   "block.subvirus.uncertain_dirt_path": "Uncertain Dirt Path",
+  "block.subvirus.unknown_portal_frame": "Unknown Portal Frame",
+  "block.subvirus.unknown_portal": "Portal to the Unknown",
   "block.subvirus.infected_ore": "Infected ore",
+  "block.subvirus.uncertain_leaves": "Uncertain leaves",
   "block.subvirus.uncertain_log": "Uncertain Log",
   "block.subvirus.uncertain_planks": "Uncertain planks",
   "block.subvirus.uncertain_tnt": "Uncertain TNT",
-  "subvirus.group_trans": "SubWorld infection"
+  "subvirus.group_trans": "SubWorld infection",
+  "item.subvirus.subworld_icon": "SubWorld",
+  "advancement.subvirus.subworld.title": "SubWorld",
+  "advancement.subvirus.subworld.description": "Enter the SubWorld dimension",
+  "advancement.subvirus.subworld.title": "SubWorld",
+  "advancement.subvirus.subworld.description": "SubWorld achievements",
+  "advancement.subvirus.enter_infected.title": "Where",
+  "advancement.subvirus.enter_infected.description": "Why is the front door in this world pink and violet?"
 }
+

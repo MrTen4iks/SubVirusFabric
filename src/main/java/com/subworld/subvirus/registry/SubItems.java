@@ -36,8 +36,10 @@ public class SubItems {
     public static final Item INFECTED_INGOT = register("infected_ingot", Item::new, new Item.Settings(),true);
     public static final Item INFECTED_DUST = register("infected_dust", Item::new, new Item.Settings(),true);
     public static final Item INFECTED_STICK = register("infected_stick", Item::new, new Item.Settings(),true);
+    public static final Item UNCERTAIN_EYE = register("uncertain_eye", Item::new, new Item.Settings(),true);
     public static final Item UNCERTAIN_INJECTION= register("uncertain_injection", Item::new, new Item.Settings(),true);
     public static final Item INJECTION= register("injection", Item::new, new Item.Settings(),true);
+    public static final Item SUBWORLD_ICON = register("subworld_icon", Item::new, new Item.Settings(), false);
 
     /// ------------ === +++ ||| Tools ||| +++ === ------------
 
@@ -108,7 +110,7 @@ public class SubItems {
                     .maxDamage(EquipmentType.BODY.getMaxDamage(SubArmorMaterials.BASE_DURABILITY))
             ,true
     );
-    
+
 
     /// ------------ === +++ ||| UTILS ||| +++ === ------------
 

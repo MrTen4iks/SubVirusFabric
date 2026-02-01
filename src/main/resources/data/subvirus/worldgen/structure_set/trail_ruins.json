@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 83469867,
+    "separation": 11,
+    "spacing": 48
+  },
+  "structures": [
+    {
+      "structure": "subvirus:trail_ruins",
+      "weight": 1
+    }
+  ]
+}

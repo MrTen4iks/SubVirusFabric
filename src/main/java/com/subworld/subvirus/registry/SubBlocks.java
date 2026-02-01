@@ -3,6 +3,10 @@ package com.subworld.subvirus.registry;
 import com.subworld.subvirus.SubVirus;
 import com.subworld.subvirus.world.blocks.InfectedTntBlock;
 import com.subworld.subvirus.world.blocks.SubFacingBlockRaziv;
+import com.subworld.subvirus.world.blocks.UncertainDirtPathBlock;
+import com.subworld.subvirus.world.blocks.UncertainGrassBlock;
+import com.subworld.subvirus.world.blocks.UnknownEndPortalFrameBlock;
+import com.subworld.subvirus.world.blocks.UnknownPortalBlock;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 import net.minecraft.block.*;
 import net.minecraft.client.resource.language.I18n;
@@ -37,10 +41,34 @@ public class SubBlocks {
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.STONE).requiresTool().strength(4.0F,4.0F),
             new Item.Settings(),true
     );
+    public static final BlockItemPair UNCERTAIN_DIRT = register(
+            "uncertain_dirt",
+            Block::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRAVEL).strength(0.5F),
+            new Item.Settings(),true
+    );
+    public static final BlockItemPair UNCERTAIN_GRASS_BLOCK = register(
+            "uncertain_grass_block",
+            UncertainGrassBlock::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS).strength(0.6F).ticksRandomly(),
+            new Item.Settings(),true
+    );
+    public static final BlockItemPair UNCERTAIN_DIRT_PATH = register(
+            "uncertain_dirt_path",
+            UncertainDirtPathBlock::new,
+            AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS).strength(0.65F),
+            new Item.Settings(),true
+    );
     public static final BlockItemPair UNCERTAIN_LOG = register(
             "uncertain_log",
             PillarBlock::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).strength(4.0F,4.0F),
+            new Item.Settings(),true
+    );
+    public static final BlockItemPair UNCERTAIN_LEAVES = register(
+            "uncertain_leaves",
+            settings -> new TintedParticleLeavesBlock(0.01F, settings),
+            AbstractBlock.Settings.copy(Blocks.OAK_LEAVES),
             new Item.Settings(),true
     );
     public static final BlockItemPair UNCERTAIN_PLANKS = register(
@@ -49,29 +77,23 @@ public class SubBlocks {
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.WOOD).requiresTool().strength(4.0F,4.0F),
             new Item.Settings(),true
     );
-    public static final BlockItemPair UNCERTAIN_DIRT = register(
-            "uncertain_dirt",
-            Block::new,
-            AbstractBlock.Settings.copy(Blocks.DIRT),
-            new Item.Settings(),true
-    );
-    public static final BlockItemPair UNCERTAIN_GRASS_BLOCK = register(
-            "uncertain_grass_block",
-            GrassBlock::new,
-            AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK),
-            new Item.Settings(),true
-    );
-    public static final BlockItemPair UNCERTAIN_DIRT_PATH = register(
-            "uncertain_dirt_path",
-            DirtPathBlock::new,
-            AbstractBlock.Settings.copy(Blocks.DIRT_PATH),
-            new Item.Settings(),true
-    );
     public static final BlockItemPair UNCERTAIN_TNT = register(
             "uncertain_tnt",
             InfectedTntBlock::new,
             AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS).strength(0.0F,0.0F),
             new Item.Settings(),true
+    );
+    public static final BlockItemPair UNKNOWN_PORTAL = register(
+            "unknown_portal",
+            UnknownPortalBlock::new,
+            AbstractBlock.Settings.create().noCollision().nonOpaque().luminance(state -> 11).strength(-1.0F, 3600000.0F).dropsNothing(),
+            new Item.Settings(),false
+    );
+    public static final BlockItemPair UNKNOWN_PORTAL_FRAME = register(
+            "unknown_portal_frame",
+            UnknownEndPortalFrameBlock::new,
+            AbstractBlock.Settings.copy(Blocks.END_PORTAL_FRAME),
+            new Item.Settings(),false
     );
 
     public static final BlockItemPair raziv1 = register( ///  myron

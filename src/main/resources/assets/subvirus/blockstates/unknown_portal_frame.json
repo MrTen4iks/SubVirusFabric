@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,eye=false": { "model": "subvirus:block/portal_2" },
+    "facing=east,eye=false": { "model": "subvirus:block/portal_2", "y": 90 },
+    "facing=south,eye=false": { "model": "subvirus:block/portal_2", "y": 180 },
+    "facing=west,eye=false": { "model": "subvirus:block/portal_2", "y": 270 },
+    "facing=north,eye=true": { "model": "subvirus:block/portal_1" },
+    "facing=east,eye=true": { "model": "subvirus:block/portal_1", "y": 90 },
+    "facing=south,eye=true": { "model": "subvirus:block/portal_1", "y": 180 },
+    "facing=west,eye=true": { "model": "subvirus:block/portal_1", "y": 270 }
+  }
+}

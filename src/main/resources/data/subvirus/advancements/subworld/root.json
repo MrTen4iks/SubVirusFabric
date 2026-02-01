@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "subvirus:uncertain_eye"
+    },
+    "title": {
+      "translate": "advancement.subvirus.subworld.title"
+    },
+    "description": {
+      "translate": "advancement.subvirus.subworld.description"
+    },
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

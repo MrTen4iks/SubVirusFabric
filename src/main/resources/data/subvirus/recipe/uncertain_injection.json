@@ -7,7 +7,10 @@
   "key": {
     "A": "subvirus:injection",
     "P": {
-      "item": "minecraft:lingering_potion",
+      "fabric:type": "fabric:components",
+      "base": {
+        "item": "minecraft:lingering_potion"
+      },
       "components": {
         "minecraft:potion_contents": {
           "potion": "subvirus:unknowns"

@@ -1,0 +1,24 @@
+﻿{
+    "elements":  [
+                     {
+                         "element":  {
+                                         "element_type":  "minecraft:feature_pool_element",
+                                         "feature":  "minecraft:oak",
+                                         "projection":  "rigid",
+                                         "processors":  "subvirus:village_plains_replace"
+                                     },
+                         "weight":  1
+                     },
+                     {
+                         "element":  {
+                                         "element_type":  "minecraft:feature_pool_element",
+                                         "feature":  "subvirus:trees_uncertain",
+                                         "projection":  "rigid",
+                                         "processors":  "subvirus:village_plains_replace"
+                                     },
+                         "weight":  2
+                     }
+                 ],
+    "fallback":  "minecraft:empty"
+}
+

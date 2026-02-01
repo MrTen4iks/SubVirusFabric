@@ -1,0 +1,26 @@
+{
+  "parent": "subvirus:subworld/root",
+  "display": {
+    "icon": {
+      "item": "subvirus:uncertain_grass_block"
+    },
+    "title": {
+      "translate": "advancement.subvirus.enter_infected.title"
+    },
+    "description": {
+      "translate": "advancement.subvirus.enter_infected.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "enter_subworld": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "subvirus:infected"
+      }
+    }
+  }
+}

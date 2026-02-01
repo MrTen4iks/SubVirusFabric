@@ -1,0 +1,16 @@
+{
+  "placement": {
+    "type": "minecraft:concentric_rings",
+    "count": 64,
+    "distance": 32,
+    "preferred_biomes": "#subvirus:stronghold_biased_to",
+    "salt": 0,
+    "spread": 3
+  },
+  "structures": [
+    {
+      "structure": "subvirus:stronghold",
+      "weight": 1
+    }
+  ]
+}

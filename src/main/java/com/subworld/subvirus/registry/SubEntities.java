@@ -15,7 +15,7 @@ public class SubEntities {
             Registries.ENTITY_TYPE,
             Identifier.of(SubVirus.MOD_ID, "infected_tnt"),
             EntityType.Builder.create((EntityType<InfectedTntEntity> type, net.minecraft.world.World world) -> new InfectedTntEntity(type, world), SpawnGroup.MISC)
-                    .dimensions(0.98F, 0.98F)
+                    .dimensions(0.5F, 0.5F)
                     .maxTrackingRange(1)
                     .trackingTickInterval(10)
                     .build(RegistryKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(SubVirus.MOD_ID, "infected_tnt")))

@@ -17,7 +17,6 @@
     [],
     [],
     [
-      "minecraft:ore_dirt",
       "minecraft:ore_gravel",
       "minecraft:ore_granite_upper",
       "minecraft:ore_granite_lower",
@@ -46,10 +45,12 @@
     ],
     [],
     [],
+    [],
     [
-      "subvirus:trees_uncertain"
-    ],
-    []
+      "subvirus:trees_uncertain",
+      "minecraft:patch_grass_normal",
+      "minecraft:patch_tall_grass"
+    ]
   ],
   "has_precipitation": true,
   "spawn_costs": {},
